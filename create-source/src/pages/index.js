@@ -21,7 +21,10 @@ const Home = ({ data }) => (
               </Link>
             </h2>
             <div className="post-list-meta">
-              <strong>By {p.user[0] ? p.user[0].username : ''}</strong> {p.allComments.length} comments
+              <strong>
+                By <Link to={`/author/${p.user[0]._id}`}>{p.user[0] ? p.user[0].username : ''}</Link>
+              </strong>{' '}
+              {p.allComments.length} comments
             </div>
             <p className="post-list-body">{p.body}</p>
             <Link className="post-list-link" to={`/${p.slug}`}>

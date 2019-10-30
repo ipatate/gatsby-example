@@ -1,7 +1,7 @@
 import React from 'react';
 import { useStaticQuery, graphql, Link } from 'gatsby';
 
-const Layout = ({ children }) => {
+const Layout = ({ children, page }) => {
   const { site } = useStaticQuery(graphql`
     query MyQuery {
       site {
@@ -13,7 +13,7 @@ const Layout = ({ children }) => {
     }
   `);
   return (
-    <div className="container">
+    <div className={`container ${page || 'global'}-content`}>
       <div className="hero">
         <Link to="/">{site.siteMetadata.title}</Link>
       </div>

@@ -1,10 +1,12 @@
 import React from 'react';
 import Layout from '../components/layout';
 import Image from '../components/image';
+import SEO from '../components/seo';
 import { graphql, Link } from 'gatsby';
 
 const Post = ({ data }) => (
-  <Layout>
+  <Layout page="post">
+    <SEO title={data.post.title} />
     <div className="breadcrumb">
       <Link to="/">Home</Link>
       <span>{data.post.title}</span>
@@ -19,7 +21,7 @@ const Post = ({ data }) => (
     <div id="comments" className="post-comments-list">
       <h3>Comments</h3>
       {data.post.allComments.map(c => (
-        <div className="comment-container">
+        <div key={c._id} className="comment-container">
           <strong>By {c.name}</strong>
           <p>{c.body}</p>
         </div>
