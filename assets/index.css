@@ -117,13 +117,20 @@ a, a:visited {
     font-weight: bold;
 }
 
+.post-content .hero {
+    height: 200px;
+}
+
 .main {
     max-width: 62rem;
-    margin: 2rem auto;
+    margin: -2rem auto 0;
+    background: #fff;
+    padding: 1rem;
+    box-shadow: 0 -1px 13px #ccc;
 }
 
 .breadcrumb {
-    margin: 2rem 0
+    margin: 0 0 1rem;
 }
 
 .breadcrumb a, a:visited {
@@ -200,6 +207,20 @@ footer {
 
 .post-list-link {
     margin-left: auto;
+}
+
+@media screen and (max-width: 500px) {
+    .post-list-element {
+        flex-direction: column;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 2rem;
+    }
+    .post-list-img {
+        width: 100%;
+    }
+    .post-list-content {
+        margin: 1rem 0 0 0;
+    }
 }
 
 
