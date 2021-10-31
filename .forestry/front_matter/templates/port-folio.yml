@@ -1,4 +1,8 @@
 ---
 label: port-folio
 hide_body: true
-fields: []
+fields:
+- name: photos
+  type: image_gallery
+  config: {}
+  label: Photos
