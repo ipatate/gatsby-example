@@ -1,8 +1,0 @@
----
-label: port-folio
-hide_body: true
-fields:
-- name: photos
-  type: image_gallery
-  config: {}
-  label: Photos
